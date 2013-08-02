@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title></title>
+</head>
+<style type="text/css">
+  #board{
+    width: 600px;
+    height: 600px;
+    background-color: green;
+  }
+
+  #tank{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    transition: left .3s;
+    -webkit-transition: left .3s;
+  }
+
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('body').on('keypress', function(key){
+      if (key.keyCode == 100){
+        $('#tank').finish().animate({
+          left: "+=10"
+        }, 500);
+      }else
+      if(key.keyCode == 97){
+        console.log("Izquierda");
+        toX = $('#tank').position().left - 10
+        $('#tank').css('left', toX)
+      }
+
+    });
+
+
+  });
+</script>
+<body>
+
+<div id="board">
+
+  <div id="tank">
+  </div>
+</div>
+</body>
+</html>
