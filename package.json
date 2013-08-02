@@ -1,0 +1,15 @@
+{
+  "name": "battle-tanks",
+  "version": "0.1.0",
+  "description": "battle-tanks",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:edymerchk/battle-tanks.git"
+  },
+  "author": "Luis Edymerchk",
+  "license": "MIT",
+  "dependencies": {
+    "johnny-five": "latest",
+    "socket.io": "latest"
+  }
+}
