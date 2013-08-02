@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Battlefield Tanks!</title>
+  <style media="screen">
+    #wrapper{
+      width: 600px;
+      margin: 0 auto;
+    }
+    #p1{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 20px;
+      float: left;
+    }
+    #p2{
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      float: right;
+      border-radius: 20px;
+    }
+    .on{
+      background-color: black !important;
+      border-color: green;
+    }
+  </style>
+  <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script>
+    $(function() {
+     var socket = io.connect('http://localhost', {port: 8080});
+
+
+    var left = function(){
+      $('#p1').toggleClass('on');
+      console.log("lef");
+    }
+
+    var right = function(){
+      $('#p2').toggleClass('on');
+      console.log("right");
+    }
+
+    var angle = function (value) {
+      // console.log(value);
+      
+    }
+    socket.on('left', left);
+    socket.on('right', right);
+    socket.on('angle', function (data) {
+      angle(data);
+    });
+
+  });
+    
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="p1"></div>
+    <div id="p2"></div>
+  </div>
+</body>
+</html>
