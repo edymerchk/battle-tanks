@@ -21,3 +21,8 @@
     -webkit-transition: left .3s;
     
   }
+
+  .bullet{
+    width: 20px;
+    height: 20px;
+  }
