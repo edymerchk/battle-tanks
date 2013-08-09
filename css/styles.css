@@ -1,5 +1,5 @@
   #board{
-    width: 1024px;
+    width: 100%;
     height: 768px;
     border-radius:25px;
     border:2px solid;
@@ -25,4 +25,19 @@
   .bullet{
     width: 20px;
     height: 20px;
+  }
+
+  .live {
+    width: 40px;
+    height: 40px;
+  }
+
+  .livesA{
+    float: left;
+    padding: 10px
+  }
+
+  .livesB{
+    float: right;
+    padding: 10px
   }
